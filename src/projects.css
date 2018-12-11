@@ -1,0 +1,154 @@
+
+
+
+#projectsWrapper {
+   height: 520px;
+   
+
+}
+
+.grid {
+    border: 2px white;
+    height: 100%;;
+    margin: auto;
+    width: 1200px;
+    display: grid;
+    grid-template-columns: 25% 25% 2fr 2fr 4fr;
+    grid-template-rows: repeat(4, 100px);
+    grid-gap: 10px 15px;
+  }
+  
+  .a {
+    grid-area: 1 / 1 / span 2 / span 2;
+    background-image: url('historicalTimeline.png');
+    background-size: cover;
+  }
+  .b {
+    grid-area: 1 / 3 / span 2 / span 2;
+    background-color: rgb(100, 100, 93);
+    
+  }
+  .c {
+    grid-area: 1 / 5 / span 2 / span 1;
+    background-color: rgb(83, 83, 13);
+  }
+  .d {
+    grid-area: 3 / 1 / span 2 / span 1;
+    background-color: rgb(247, 247, 99);
+    background-image: url('OCEAN.png');
+    background-size: cover;
+  }
+  .e {
+    grid-area: 3 / 2 / span 1 / span 2;
+    background-color: rgb(236, 236, 236);
+  }
+  .f {
+    grid-area: 4 / 2 / span 1 / span 2;
+    background-color: rgb(212, 212, 18);
+  }
+
+  .g {
+    grid-area: 3 / 4 / span 2 / span 2;
+    background-color: rgb(212, 212, 18);
+  }
+
+/*   .h {
+    grid-area: 3 / 3 / span 1 / span 2;
+    background-color: rgb(212, 212, 18);
+} */
+
+  
+
+
+  .box {
+    color: black;
+    border-radius: 5px;
+    border: 2px black;
+    position: relative;
+    text-align: right;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  }
+
+  .box:hover {
+    box-shadow: 0 2px 28px rgba(0,0,0,0.25), 0 5px 6px rgba(0,0,0,0.22);
+  }
+
+  .projectTitle {
+    color: rgb(22, 18, 18);
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: rgb(245, 245, 245, 0.7);
+    font: 400 100px/1.3 'Oleo Script', Helvetica, sans-serif;
+    font-size: 20px;
+    text-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    position: absolute;
+    top: 40px;
+    left: 5px;
+  }
+
+  .block {
+      display: block;     
+  }
+
+  .collapse {
+    transition: all 300ms;
+      display: none;
+  }
+
+  .expand {
+      display: block;
+      height: 350px;
+      z-index: 1;
+      animation: big;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      
+           
+  }
+  @keyframes big {
+    0%  {width: 50%; height: 200px;}
+    100%  {width: 100%; height: 100%}
+  }
+
+  .viewDiv {
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    width: 100%;
+    font-size: 60px;
+    z-index: 2;
+
+  }
+  
+  
+ 
+  .viewProject {
+    color: rgb(90, 115, 196);
+    border: solid rgb(90, 115, 196) 4px;
+    transition: all 500ms;
+    border-radius: 20px;
+    margin: auto;
+    text-decoration: none;
+    z-index: 3;
+    padding: 0px 5px 10px 5px;
+
+  }
+
+  .viewProject:hover {
+    background-color: rgb(245, 245, 245, 0.5);
+    padding-bottom: 35px;
+    color: rgb(17, 56, 185);
+    border: solid rgb(17, 56, 185) 4px;
+  }
+
+  .viewDiv svg {
+    display: none;
+    position: absolute;
+    left: 380px;
+    top: 70px;  
+    pointer-events: none;
+  }
+ 
